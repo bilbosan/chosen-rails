@@ -289,6 +289,7 @@ class Chosen extends AbstractChosen
       choice.addClass 'search-choice-disabled'
     else
       close_link = $('<a />', { class: 'search-choice-close', 'data-option-array-index': item.array_index })
+      close_link.html('<i class="ss-delete" />')
       close_link.bind 'click.chosen', (evt) => this.choice_destroy_link_click(evt)
       choice.append close_link
     
